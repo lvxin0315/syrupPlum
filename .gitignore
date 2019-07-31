@@ -16,3 +16,5 @@
 example/db/*
 !example/db/*.md
 
+vendor
+
