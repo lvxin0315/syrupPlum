@@ -16,3 +16,13 @@ func PathExists(path string) (bool, error) {
 	}
 	return false, err
 }
+
+func SetDebug(debug bool) {
+	Debug = debug
+}
+
+func SPError(a ...interface{}) {
+	if Debug {
+		fmt.Println(a)
+	}
+}
