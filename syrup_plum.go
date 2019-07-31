@@ -4,7 +4,7 @@ import (
 	"errors"
 )
 
-var Debug = true
+var Debug = false
 
 type SyrupPlum struct {
 	option *Option
