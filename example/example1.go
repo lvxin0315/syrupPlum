@@ -21,14 +21,14 @@ func main() {
 
 	syrup_plum.SetDebug(true)
 
-	children := &Demo{
+	child := &Demo{
 		Name:   "yiyi",
 		Parent: "lvxin",
 	}
 
 	my := &Demo{
 		Name:     "lvxin",
-		Children: []*Demo{children},
+		Children: []*Demo{child},
 	}
 
 	err = sp.Save("abc", my)
