@@ -2,6 +2,7 @@ package syrup_plum
 
 import (
 	"errors"
+	"reflect"
 )
 
 var Debug = false
@@ -40,4 +41,16 @@ func (sp *SyrupPlum) Find(index string, object interface{}) error {
 //删除
 func (sp *SyrupPlum) Delete(index string) error {
 	return sp.getQuery().Remove(index)
+}
+
+//追加保存，会覆盖
+func (sp *SyrupPlum) Append(index string, object interface{}, appendObject interface{}) error {
+	if err := sp.Find(index, object); err != nil {
+		return err
+	}
+	values := reflect.ValueOf(object).Elem()
+	appendValues := reflect.ValueOf(appendObject)
+	valArr := reflect.Append(values, appendValues)
+	values.Set(valArr)
+	return sp.getQuery().Save(index, object)
 }

@@ -13,7 +13,7 @@ type Demo struct {
 }
 
 func main() {
-	op, err := syrup_plum.InitOption("./example/db/")
+	op, err := syrup_plum.InitOption("db/")
 	if err != nil {
 		log.Fatal(err)
 	}

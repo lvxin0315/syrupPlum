@@ -140,3 +140,55 @@ func Test_Delete(t *testing.T) {
 		t.Fatal("文件应该被删除")
 	}
 }
+
+func Test_AppendList(t *testing.T) {
+	option := syrup_plum.Option{
+		SavePath: "../example/db/",
+	}
+	sp := syrup_plum.NewSyrupPlum(&option)
+	if sp == nil {
+		t.Fatal("sp is nil")
+	}
+	//保存
+	var spDataList []*SpData
+	spDataList = append(spDataList, &SpData{
+		Who:   "lvxin1",
+		Which: 2,
+		When:  time.Now(),
+	}, &SpData{
+		Who:   "lvxin2",
+		Which: 3,
+		When:  time.Now(),
+	})
+	err := sp.Save("demoList", &spDataList)
+	if err != nil {
+		t.Fatal(err)
+	}
+	//追加
+	var spAppendDataList []*SpData
+	err = sp.Append("demoList", &spAppendDataList, &SpData{
+		Who:   "lvxin3",
+		Which: 4,
+		When:  time.Now(),
+	})
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	if len(spAppendDataList) != 3 {
+		t.Fatal("追加失败---", len(spAppendDataList))
+	}
+
+	//查询持久化内容
+	var spAppendEdDataList []*SpData
+	err = sp.Find("demoList", &spAppendEdDataList)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	fmt.Println(spAppendEdDataList[2])
+
+	if len(spAppendEdDataList) != 3 {
+		t.Fatal("追加保存失败")
+	}
+}
