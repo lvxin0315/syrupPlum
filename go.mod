@@ -1,4 +1,4 @@
-module syrup-plum
+module syrupPlum
 
 go 1.12
 
