@@ -2,7 +2,7 @@ package test
 
 import (
 	"fmt"
-	"syrup-plum"
+	"github.com/lvxin0315/syrupPlum"
 	"testing"
 	"time"
 )
@@ -14,20 +14,20 @@ type SpData struct {
 }
 
 func Test_NewSyrupPlum(t *testing.T) {
-	option := syrup_plum.Option{
+	option := syrupPlum.Option{
 		SavePath: "../example/db/",
 	}
-	sp := syrup_plum.NewSyrupPlum(&option)
+	sp := syrupPlum.NewSyrupPlum(&option)
 	if sp == nil {
 		t.Fatal("sp is nil")
 	}
 }
 
 func Test_Save(t *testing.T) {
-	option := syrup_plum.Option{
+	option := syrupPlum.Option{
 		SavePath: "../example/db/",
 	}
-	sp := syrup_plum.NewSyrupPlum(&option)
+	sp := syrupPlum.NewSyrupPlum(&option)
 	if sp == nil {
 		t.Fatal("sp is nil")
 	}
@@ -43,10 +43,10 @@ func Test_Save(t *testing.T) {
 }
 
 func Test_Find(t *testing.T) {
-	option := syrup_plum.Option{
+	option := syrupPlum.Option{
 		SavePath: "../example/db/",
 	}
-	sp := syrup_plum.NewSyrupPlum(&option)
+	sp := syrupPlum.NewSyrupPlum(&option)
 	if sp == nil {
 		t.Fatal("sp is nil")
 	}
@@ -62,10 +62,10 @@ func Test_Find(t *testing.T) {
 }
 
 func Test_SaveList(t *testing.T) {
-	option := syrup_plum.Option{
+	option := syrupPlum.Option{
 		SavePath: "../example/db/",
 	}
-	sp := syrup_plum.NewSyrupPlum(&option)
+	sp := syrupPlum.NewSyrupPlum(&option)
 	if sp == nil {
 		t.Fatal("sp is nil")
 	}
@@ -87,10 +87,10 @@ func Test_SaveList(t *testing.T) {
 }
 
 func Test_GetList(t *testing.T) {
-	option := syrup_plum.Option{
+	option := syrupPlum.Option{
 		SavePath: "../example/db/",
 	}
-	sp := syrup_plum.NewSyrupPlum(&option)
+	sp := syrupPlum.NewSyrupPlum(&option)
 	if sp == nil {
 		t.Fatal("sp is nil")
 	}
@@ -108,10 +108,10 @@ func Test_GetList(t *testing.T) {
 }
 
 func Test_Delete(t *testing.T) {
-	option := syrup_plum.Option{
+	option := syrupPlum.Option{
 		SavePath: "../example/db/",
 	}
-	sp := syrup_plum.NewSyrupPlum(&option)
+	sp := syrupPlum.NewSyrupPlum(&option)
 	if sp == nil {
 		t.Fatal("sp is nil")
 	}
@@ -142,10 +142,10 @@ func Test_Delete(t *testing.T) {
 }
 
 func Test_AppendList(t *testing.T) {
-	option := syrup_plum.Option{
+	option := syrupPlum.Option{
 		SavePath: "../example/db/",
 	}
-	sp := syrup_plum.NewSyrupPlum(&option)
+	sp := syrupPlum.NewSyrupPlum(&option)
 	if sp == nil {
 		t.Fatal("sp is nil")
 	}

@@ -13,7 +13,7 @@ replace (
 
 require (
 	github.com/Unknwon/goconfig v0.0.0-20190425194916-3dba17dd7b9e
-	github.com/lvxin0315/syrupPlum v0.0.0-20200602102725-942cded85a2c
+	github.com/lvxin0315/syrupPlum v0.0.0-20200602102850-4db6269b6378
 	github.com/pkg/errors v0.8.1
 	github.com/smartystreets/goconvey v0.0.0-20190710185942-9d28bd7c0945 // indirect
 )

@@ -1,4 +1,4 @@
-package syrup_plum
+package syrupPlum
 
 import (
 	"errors"

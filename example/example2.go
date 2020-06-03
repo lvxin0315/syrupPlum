@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/lvxin0315/syrup-plum"
+	"github.com/lvxin0315/syrupPlum"
 	"log"
 	"net/http"
 	_ "net/http/pprof"
@@ -17,13 +17,13 @@ type DemoW struct {
 
 func main() {
 	serve()
-	op, err := syrup_plum.InitOption("db/")
+	op, err := syrupPlum.InitOption("db/")
 	if err != nil {
 		log.Fatal(err)
 	}
-	sp := syrup_plum.NewSyrupPlum(op)
+	sp := syrupPlum.NewSyrupPlum(op)
 
-	syrup_plum.SetDebug(true)
+	syrupPlum.SetDebug(true)
 
 	//生成10万个child
 	var children []*DemoW

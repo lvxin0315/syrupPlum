@@ -1,12 +1,12 @@
 package test
 
 import (
-	"syrup-plum"
+	"github.com/lvxin0315/syrupPlum"
 	"testing"
 )
 
 func Test_InitOptionWithConfigFile(t *testing.T) {
-	opt, err := syrup_plum.InitOptionWithConfigFile("../example/config.ini")
+	opt, err := syrupPlum.InitOptionWithConfigFile("../example/config.ini")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -18,7 +18,7 @@ func Test_InitOptionWithConfigFile(t *testing.T) {
 }
 
 func Test_InitOption(t *testing.T) {
-	opt, err := syrup_plum.InitOption("../example/db/")
+	opt, err := syrupPlum.InitOption("../example/db/")
 	if err != nil {
 		t.Fatal(err)
 	}

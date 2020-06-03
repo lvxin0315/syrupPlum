@@ -1,4 +1,4 @@
-package syrup_plum
+package syrupPlum
 
 import (
 	"crypto/sha1"

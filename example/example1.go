@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/lvxin0315/syrup-plum"
+	"github.com/lvxin0315/syrupPlum"
 	"log"
 )
 
@@ -13,13 +13,13 @@ type Demo struct {
 }
 
 func main() {
-	op, err := syrup_plum.InitOption("db/")
+	op, err := syrupPlum.InitOption("db/")
 	if err != nil {
 		log.Fatal(err)
 	}
-	sp := syrup_plum.NewSyrupPlum(op)
+	sp := syrupPlum.NewSyrupPlum(op)
 
-	syrup_plum.SetDebug(true)
+	syrupPlum.SetDebug(true)
 
 	child := &Demo{
 		Name:   "yiyi",
